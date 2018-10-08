@@ -1,0 +1,8 @@
+setup.py
+pizza_package.egg-info/PKG-INFO
+pizza_package.egg-info/SOURCES.txt
+pizza_package.egg-info/dependency_links.txt
+pizza_package.egg-info/not-zip-safe
+pizza_package.egg-info/top_level.txt
+src/__init__.py
+src/pizza_file.py
