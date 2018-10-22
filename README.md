@@ -27,14 +27,14 @@ Topics covered:
 ### Schedule
 Meetings dates and times are TBD.
 
-|Meeting     |Date              |Time             |Class Topic                                                              |
+|Meeting     |Date              |Time & Room      |Class Topic                                                              |
 |------------|------------------|-----------------|---------------------------------------------------------------------    |
-|1           |TBD               |TBD              |Overview, Environment Setup and Syntax Review*                           |
-|2           |TBD               |TBD              |Project Setup - Introduction to Flask                                    |
-|3           |TBD               |TBD              |Flask continued - Frontend with Jinja2, HTML5 and Material Design        |
-|4           |TBD               |TBD              |Flask continued - Introduction to MongoDB and document oriented databases|
-|5           |TBD               |TBD              |Flask continued - Integrating external APIs                                   |
-|6           |TBD               |TBD              |TBD                                                                      |
+|1           |10/2/18           |6:00 PM in EC 204|Overview, Environment Setup and Syntax Review*                           |
+|2           |10/9/18           |6:00 PM in EC 204|Project Setup - Introduction to Flask                                    |
+|3           |10/16/18          |6:00 PM in EC 204|Flask continued - Frontend with Jinja2, HTML5 and Material Design        |
+|4           |10/23/18          |6:00 PM in EC 204|Flask continued - Introduction to MongoDB and document oriented databases|
+|5           |10/30/18          |6:00 PM in EC 204|Flask continued - Account logins and sessions                            |
+|6           |11/6/18           |6:00 PM in EC 204|Flask continued - Integrating external APIs                              |
 |7           |TBD               |TBD              |TBD                                                                      |
 |8           |TBD               |TBD              |TBD                                                                      |
 |9           |TBD               |TBD              |TBD                                                                      |
