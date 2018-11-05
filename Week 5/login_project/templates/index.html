@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <title>Home</title>
 </head>
+
 <body>
     This is the home page.
     {% if current_user.is_authenticated %}
     You are logged in.
+    <br/>
+    <a href="{{ url_for('logout')}}">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color-text--white mdl-color--accent">Logout</button>
+    </a>
     {% else %}
     You are not logged in.
+    <br/>
+    <a href="{{ url_for('login')}}">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color-text--white mdl-color--accent">Login</button>
+    </a>
+    <br/>
+    <br/>
+    <a href="{{ url_for('register')}}">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color-text--white mdl-color--accent">Register</button>
+    </a>
     {% endif %}
 </body>
+
 </html>

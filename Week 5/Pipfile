@@ -10,6 +10,7 @@ pymongo = "*"
 flask-wtf = "*"
 wtforms = "*"
 dnspython = "*"
+login-project = {editable = true, path = "."}
 
 [dev-packages]
 

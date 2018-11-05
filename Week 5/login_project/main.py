@@ -15,15 +15,18 @@ login_manager.login_view = "login"
 
 db_connection = MongoConnector(app)
 
+sample_user = {
+    "name": "Simon Woldemichael",
+    "email": "simon.woldemichael@ttu.edu",
+    "password": "password",
+}
 
 @login_manager.user_loader
 def load_user(email):
-    entry = db_connection.get_user(email)
-    if entry is not None:
-        if request.form["password"] == entry["password"]:
-            return User(entry["name"], entry["email"])
-    return
-   
+    if email == sample_user["email"]:
+        return User(sample_user["name"], sample_user["email"])
+
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -31,18 +34,17 @@ def index():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    if request.method == "POST":
-        entry = db_connection.get_user(request.form["email"])
-        if entry is not None:
-            if request.form["password"] == entry["password"]:
-                user = User(entry["name"], entry["email"])
+    print(current_user.is_anonymous)
+    if current_user.is_anonymous:
+        if request.method == "POST":
+            if request.form["password"] == sample_user["password"]:
+                user = User(sample_user["name"], sample_user["email"])
                 login_user(user)
-                return "You logged in"
-            flash("Incorrect username or password. Please try again.")
+                return "You logged in!"
+            print("Incorrect password. Please try again.")
             return redirect(url_for("login"))
-        flash(f"Unable to find account with email {request.form['email']}")
-        return redirect(url_for("login"))
-    return render_template("login.html")
+        return render_template("login.html")
+    return "You are already logged in!"
 
 
 @app.route("/logout")
@@ -55,10 +57,11 @@ def logout():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if current_user.is_authenticated:
-        flash("You are already registered.")
+        print("You are already registered.")
         return redirect(url_for("index"))    
     if request.method == "POST":
-        print(dict(request.form))
+        # What would you do to extract and use this form data?
+        print(request.form) 
     return render_template("register.html")
 
 
