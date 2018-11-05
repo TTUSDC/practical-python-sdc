@@ -9,6 +9,7 @@ flask-login = "*"
 pymongo = "*"
 flask-wtf = "*"
 wtforms = "*"
+dnspython = "*"
 
 [dev-packages]
 
